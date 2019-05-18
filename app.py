@@ -80,14 +80,12 @@ def handle_message(event):
 		line_bot_api.reply_message(event.reply_token, Message)
 	elif msg == "Start Introduction":
 		line_bot_api.reply_message(event.reply_token, TextSendMessage(text="IIIII!!"))
-	elif msg == "List Experience":
+	elif msg == "List Education":
 		line_bot_api.reply_message(event.reply_token, TextSendMessage(text="EEEEEEX!!!"))
 	elif msg == "List Project":
 		line_bot_api.reply_message(event.reply_token, TextSendMessage(text="PPPPPPP!!!"))
 	elif msg == "List Professional & Extracurricular Experience":
 		line_bot_api.reply_message(event.reply_token, TextSendMessage(text="PEE!!!!"))
-	elif msg == "List Skill":
-		line_bot_api.reply_message(event.reply_token, TextSendMessage(text="SSSSSS!!!"))
 	else:
 		line_bot_api.reply_message(event.reply_token, TextSendMessage(text="Without this command: Please enter \"help\""))
 	
