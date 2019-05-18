@@ -20,6 +20,15 @@ def InitialTemplate():
           MessageTemplateAction(
             label="Education",
             text="List Education"
+          ),
+          MessageTemplateAction(
+            label="Project have done",
+            text="List Project"
+          ),
+          
+          MessageTemplateAction(
+            label="Skill",
+            text="List Skill"
           )
         ]
       )
