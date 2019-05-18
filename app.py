@@ -13,6 +13,7 @@ line_bot_api = LineBotApi('+9rpd2oXUcgm3U9JiTomwNwaQPxJJ88D+uGsMPldakfgX1ekAzjNd
 # Channel Secret
 handler = WebhookHandler('bae0967b1cab0dddc8fff78f53659c7d')
 
+"""
 # UserID handler
 def loadUserId():
     try:
@@ -31,7 +32,7 @@ def saveUserId(userId):
     idFile = open('idfile', 'a')
     idFile.write(userId+';')
     idFile.close()
-
+"""
 
 # 監聽所有來自 /callback 的 Post Request
 @app.route("/callback", methods=['POST'])
@@ -54,7 +55,7 @@ def handle_message(event):
     Message = TemplateSendMessage(
         alt_text='Introdution template!!',
         template=ButtonsTemplate(
-            thumbnail_image_url='https://imgur.com/1WCRDsm',
+            thumbnail_image_url='https://imgur.com/1WCRDsm.jpg',
             title='Introduction',
             text="Please click the botton which you are interesting about Song Yun",
             actions=[
@@ -69,7 +70,7 @@ def handle_message(event):
             ]
         )
     )
-    message = event.message.text
+    #message = event.message.text
     #event.message.text就是用戶傳來的文字訊息
     #if message == 'help':
     line_bot_api.reply_message(event.reply_token, Message)
@@ -84,7 +85,7 @@ def handle_message(event):
 
 import os
 if __name__ == "__main__":
-
+    """
     idList = loadUserId()
     if idList: user_id_set = set(idList)
 
@@ -93,6 +94,6 @@ if __name__ == "__main__":
             line_bot_api.push_message(userId, TextSendMessage(text='LineBot is ready for you.'))  # Push API example
     except Exception as e:
         print(e)
-
+    """
     port = int(os.environ.get('PORT', 5000))
     app.run(host='0.0.0.0', port=port)
