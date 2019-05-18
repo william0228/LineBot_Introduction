@@ -14,8 +14,24 @@ def InitialTemplate():
         text="Please click the botton",
         actions=[
           MessageTemplateAction(
-            label='message',
-            text='message text'
+            label="Brief Introduction",
+            text="Start Introduction"
+          ),
+          MessageTemplateAction(
+            label="Education",
+            text="List Education"
+          ),
+          MessageTemplateAction(
+            label="Project have done",
+            text="List Project"
+          ),
+          MessageTemplateAction(
+            label="Experience",
+            text="List Professional & Extracurricular Experience"
+          ),
+          MessageTemplateAction(
+            label="Skill",
+            text="List Skill"
           )
         ]
       )

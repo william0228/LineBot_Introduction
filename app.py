@@ -69,16 +69,15 @@ def callback():
 	return 'OK'
 
 
+# message handler
 @handler.add(MessageEvent, message=TextMessage)
 def handle_message(event):
-	
-	#InitialTemplate()
-	msg = event.message.text
-	#event.message.text就是用戶傳來的文字訊息
-	#MsgHandle(message, event)
 
+	Message = InitialTemplate()
+	message = event.message.text
+	#event.message.text就是用戶傳來的文字訊息
 	if msg == "help":
-		line_bot_api.reply_message(event.reply_token, InitialTemplate)
+		line_bot_api.reply_message(event.reply_token, Message)
 	elif msg == "Start Introduction":
 		line_bot_api.reply_message(event.reply_token, TextSendMessage(text="IIIII!!"))
 	elif msg == "List Experience":
@@ -92,8 +91,6 @@ def handle_message(event):
 	else:
 		line_bot_api.reply_message(event.reply_token, TextSendMessage(text="Without this command: Please enter \"help\""))
 	
-
-
 	userId = event.source.user_id
 	if not userId in user_id_set:
 		user_id_set.add(userId)
