@@ -74,7 +74,7 @@ def callback():
 def handle_message(event):
 
 	Message = InitialTemplate()
-	message = event.message.text
+	msg = event.message.text
 	#event.message.text就是用戶傳來的文字訊息
 	if msg == "help":
 		line_bot_api.reply_message(event.reply_token, Message)
