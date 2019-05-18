@@ -73,8 +73,20 @@ def handle_message(event):
 	#Message = InitialTemplate()
 	message = event.message.text
 	#event.message.text就是用戶傳來的文字訊息
-	MsgHandle(message, event)
 
+	if msg == "help":
+		line_bot_api.reply_message(event.reply_token, Message)
+	elif msg == "Start Introduction":
+		line_bot_api.reply_message(event.reply_token, TextSendMessage(text="IIIII!!"))
+	elif msg == "List Education":
+		line_bot_api.reply_message(event.reply_token, TextSendMessage(text="EEEEEEX!!!"))
+	elif msg == "List Project":
+		line_bot_api.reply_message(event.reply_token, TextSendMessage(text="PPPPPPP!!!"))
+	elif msg == "List Professional & Extracurricular Experience":
+		line_bot_api.reply_message(event.reply_token, TextSendMessage(text="PEE!!!!"))
+	else:
+		line_bot_api.reply_message(event.reply_token, TextSendMessage(text="Without this command: Please enter \"help\""))
+	
 	userId = event.source.user_id
 	if not userId in user_id_set:
 		user_id_set.add(userId)
