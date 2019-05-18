@@ -50,6 +50,7 @@ def MsgHandle(msg, event):
 		line_bot_api.reply_message(event.reply_token, TextSendMessage(text="SSSSSS!!!"))
 	else:
 		line_bot_api.reply_message(event.reply_token, TextSendMessage(text="Without this command: Please enter \"help\""))
+	
 	return
 
 # 監聽所有來自 /callback 的 Post Request
@@ -68,10 +69,12 @@ def callback():
 	return 'OK'
 
 
+# message handler
 @handler.add(MessageEvent, message=TextMessage)
 def handle_message(event):
-	#Message = InitialTemplate()
-	message = event.message.text
+
+	Message = InitialTemplate()
+	msg = event.message.text
 	#event.message.text就是用戶傳來的文字訊息
 
 	if msg == "help":
