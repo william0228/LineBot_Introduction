@@ -73,10 +73,10 @@ def handle_message(event):
     )
     """
     Message = TemplateSendMessage(
-        alt_text='qqq',
+        alt_text='這是按鈕訊息板塊',
         template=ButtonsTemplate(
             thumbnail_image_url='https://i.imgur.com/XEXfWvJ.jpg',
-            title='購物選單',
+            title='購物選單ii',
             text="這是用來展示的板塊",
             actions=[
                 DatetimePickerTemplateAction(
