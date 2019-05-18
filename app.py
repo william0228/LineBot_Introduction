@@ -33,7 +33,7 @@ def callback():
 # 處理訊息
 @handler.add(MessageEvent, message=TextMessage)
 def handle_message(event):
-    message = TemplateSendMessage(
+    """message = TemplateSendMessage(
         alt_text='這是按鈕訊息板塊',
         template=ButtonsTemplate(
             thumbnail_image_url='https://i.imgur.com/XEXfWvJ.jpg',
@@ -58,7 +58,8 @@ def handle_message(event):
                 )
             ]
         )
-    )
+    )"""
+    message = event.message.text
     #event.message.text就是用戶傳來的文字訊息
     line_bot_api.reply_message(event.reply_token, message)
 
