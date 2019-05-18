@@ -27,11 +27,7 @@ def InitialTemplate():
           ),
           MessageTemplateAction(
             label="Experience",
-            text="List Experience"
-          ),
-          MessageTemplateAction(
-            label="Skill",
-            text="List Skill"
+            text="List Professional & Extracurricular Experience"
           )
         ]
       )
