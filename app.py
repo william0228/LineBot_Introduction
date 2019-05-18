@@ -34,6 +34,23 @@ def saveUserId(userId):
 	idFile.write(userId+';')
 	idFile.close()
 
+# Message handler function
+def MsgHandle(msg, event):
+	if msg == "help":
+		line_bot_api.reply_message(event.reply_token, InitialTemplate)
+	elif msg == "Start Introduction":
+		line_bot_api.reply_message(event.reply_token, TextSendMessage(text="IIIII!!"))
+	elif msg == "List Experience":
+		line_bot_api.reply_message(event.reply_token, TextSendMessage(text="EEEEEEX!!!"))
+	elif msg == "List Project":
+		line_bot_api.reply_message(event.reply_token, TextSendMessage(text="PPPPPPP!!!"))
+	elif msg == "List Professional & Extracurricular Experience":
+		line_bot_api.reply_message(event.reply_token, TextSendMessage(text="PEE!!!!"))
+	elif msg == "List Skill" :
+		line_bot_api.reply_message(event.reply_token, TextSendMessage(text="SSSSSS!!!"))
+	else:
+		line_bot_api.reply_message(event.reply_token, TextSendMessage(text="Without this command: Please enter \"help\""))
+	return
 
 # 監聽所有來自 /callback 的 Post Request
 @app.route("/callback", methods=['POST'])
@@ -50,17 +67,13 @@ def callback():
 		abort(400)
 	return 'OK'
 
-# message handler
+
 @handler.add(MessageEvent, message=TextMessage)
 def handle_message(event):
-
-	Message = InitialTemplate()
+	#Message = InitialTemplate()
 	message = event.message.text
 	#event.message.text就是用戶傳來的文字訊息
-	if message == 'help':
-		line_bot_api.reply_message(event.reply_token, Message)
-	else:
-		line_bot_api.reply_message(event.reply_token, TextSendMessage(text="Without this command: Please enter \"help\" "))
+	MsgHandle(message, event)
 
 	userId = event.source.user_id
 	if not userId in user_id_set:
