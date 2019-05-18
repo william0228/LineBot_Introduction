@@ -52,7 +52,7 @@ def callback():
 # 處理訊息
 @handler.add(MessageEvent, message=TextMessage)
 def handle_message(event):
-    
+    """
     Message = TemplateSendMessage(
         alt_text='Introdution template!!',
         template=ButtonsTemplate(
@@ -73,11 +73,11 @@ def handle_message(event):
     )
     """
     Message = TemplateSendMessage(
-        alt_text='這是按鈕訊息板塊',
+        alt_text='Introdution template!!',
         template=ButtonsTemplate(
-            thumbnail_image_url='https://i.imgur.com/XEXfWvJ.jpg',
-            title='購物選單',
-            text="這是用來展示的板塊",
+            thumbnail_image_url='https://imgur.com/1WCRDsm.jpg',
+            title='Introduction',
+            text="Please click the botton which you are interesting about Song Yun",
             actions=[
                 DatetimePickerTemplateAction(
                     label="選擇時間",
@@ -98,7 +98,6 @@ def handle_message(event):
             ]
         )
     )
-    """
     #message = event.message.text
     #event.message.text就是用戶傳來的文字訊息
     #if message == 'help':
