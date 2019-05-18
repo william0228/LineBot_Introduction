@@ -77,7 +77,7 @@ def handle_message(event):
         template=ButtonsTemplate(
             thumbnail_image_url='https://imgur.com/1WCRDsm.jpg',
             title='Introduction',
-            text="這是用來展示的板塊",
+            text="Please click the botton",
             actions=[
                 DatetimePickerTemplateAction(
                     label="選擇時間",
@@ -86,14 +86,6 @@ def handle_message(event):
                     initial='2019-02-24',
                     max='2019-12-31',
                     min='2019-01-01'
-                ),
-                MessageTemplateAction(
-                    label="清空購物車",
-                    text="GOGOGO"
-                ),
-                URITemplateAction(
-                    label="馬上來逛逛",
-                    uri="https://tw.shop.com/maso0310"
                 )
             ]
         )
