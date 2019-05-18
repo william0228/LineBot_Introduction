@@ -75,7 +75,7 @@ def handle_message(event):
     Message = TemplateSendMessage(
         alt_text='Introdution template!!',
         template=ButtonsTemplate(
-            thumbnail_image_url='https://imgur.com/1WCRDsm.jpg',
+            thumbnail_image_url='https://i.imgur.com/XEXfWvJ.jpg',
             title='Introduction',
             text="Please click the botton which you are interesting about Song Yun",
             actions=[
