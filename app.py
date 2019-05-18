@@ -72,12 +72,12 @@ def handle_message(event):
         )
     )
     """
-    Message = TemplateSendMessage(
-        alt_text="Introdution template!!",
+    message = TemplateSendMessage(
+        alt_text='這是按鈕訊息板塊i',
         template=ButtonsTemplate(
             thumbnail_image_url='https://i.imgur.com/XEXfWvJ.jpg',
-            title="Introduction",
-            text="Please click the botton which you are interesting about Song Yun",
+            title='購物選單',
+            text="這是用來展示的板塊",
             actions=[
                 DatetimePickerTemplateAction(
                     label="選擇時間",
