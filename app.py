@@ -72,8 +72,8 @@ def handle_message(event):
         )
     )
     """
-    message = TemplateSendMessage(
-        alt_text='這是按鈕訊息板塊',
+    Message = TemplateSendMessage(
+        alt_text='這是按鈕訊息板塊i',
         template=ButtonsTemplate(
             thumbnail_image_url='https://i.imgur.com/XEXfWvJ.jpg',
             title='購物選單',
