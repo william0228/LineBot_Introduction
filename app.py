@@ -77,7 +77,7 @@ def handle_message(event):
         template=ButtonsTemplate(
             thumbnail_image_url='https://i.imgur.com/XEXfWvJ.jpg',
             title='Introduction',
-            text="這是用來展示的板塊",
+            text="Please click the botton which you are interesting about Song Yun",
             actions=[
                 DatetimePickerTemplateAction(
                     label="選擇時間",
