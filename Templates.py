@@ -13,12 +13,8 @@ def InitialTemplate():
               text="Please click the botton",
               actions=[
                 MessageTemplateAction(
-                  label="Brief Introduction",
-                  text="Start Introduction"
-                ),
-                MessageTemplateAction(
-                  label="Education",
-                  text="List Education"
+                  label='message',
+                  text='message text'
                 )
               ]
             )
