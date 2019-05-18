@@ -50,6 +50,7 @@ def MsgHandle(msg, event):
 		line_bot_api.reply_message(event.reply_token, TextSendMessage(text="SSSSSS!!!"))
 	else:
 		line_bot_api.reply_message(event.reply_token, TextSendMessage(text="Without this command: Please enter \"help\""))
+	
 	return
 
 # 監聽所有來自 /callback 的 Post Request
@@ -70,10 +71,28 @@ def callback():
 
 @handler.add(MessageEvent, message=TextMessage)
 def handle_message(event):
-	#Message = InitialTemplate()
-	message = event.message.text
+	
+	#InitialTemplate()
+	msg = event.message.text
 	#event.message.text就是用戶傳來的文字訊息
-	MsgHandle(message, event)
+	#MsgHandle(message, event)
+
+	if msg == "help":
+		line_bot_api.reply_message(event.reply_token, InitialTemplate)
+	elif msg == "Start Introduction":
+		line_bot_api.reply_message(event.reply_token, TextSendMessage(text="IIIII!!"))
+	elif msg == "List Experience":
+		line_bot_api.reply_message(event.reply_token, TextSendMessage(text="EEEEEEX!!!"))
+	elif msg == "List Project":
+		line_bot_api.reply_message(event.reply_token, TextSendMessage(text="PPPPPPP!!!"))
+	elif msg == "List Professional & Extracurricular Experience":
+		line_bot_api.reply_message(event.reply_token, TextSendMessage(text="PEE!!!!"))
+	elif msg == "List Skill" :
+		line_bot_api.reply_message(event.reply_token, TextSendMessage(text="SSSSSS!!!"))
+	else:
+		line_bot_api.reply_message(event.reply_token, TextSendMessage(text="Without this command: Please enter \"help\""))
+	
+
 
 	userId = event.source.user_id
 	if not userId in user_id_set:
