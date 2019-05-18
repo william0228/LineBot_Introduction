@@ -71,9 +71,10 @@ def handle_message(event):
     )
     message = event.message.text
     #event.message.text就是用戶傳來的文字訊息
-    line_bot_api.reply_message(event.reply_token, TextSendMessage(text=message))
     if message == "help":
         line_bot_api.reply_message(event.reply_token, Message)
+    line_bot_api.reply_message(event.reply_token, TextSendMessage(text=message))
+    
 
     userId = event.source.user_id
     if not userId in user_id_set:
