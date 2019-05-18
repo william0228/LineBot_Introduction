@@ -52,7 +52,7 @@ def callback():
 # 處理訊息
 @handler.add(MessageEvent, message=TextMessage)
 def handle_message(event):
-    """
+    
     Message = TemplateSendMessage(
         alt_text='Introdution template!!',
         template=ButtonsTemplate(
@@ -98,6 +98,7 @@ def handle_message(event):
             ]
         )
     )
+    """
     #message = event.message.text
     #event.message.text就是用戶傳來的文字訊息
     #if message == 'help':
