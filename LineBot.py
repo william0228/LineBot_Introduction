@@ -5,7 +5,6 @@ from flask import Flask, request, abort
 from linebot import LineBotApi, WebhookHandler
 from linebot.exceptions import InvalidSignatureError 
 from linebot.models import MessageEvent, TextMessage, TextSendMessage
-from Function import *
 
 line_bot_api = LineBotApi('+9rpd2oXUcgm3U9JiTomwNwaQPxJJ88D+uGsMPldakfgX1ekAzjNdHHMaMXVOcrLUGp46BKsYlOF6ot/I+WZQ/vk3BxdYlEMTEA2/vaPS6GDorKNX/f6d7rWME28N8kchJAxnSyTw0fQDfks7uauoAdB04t89/1O/w1cDnyilFU=') #LineBot's Channel access token
 handler = WebhookHandler('bae0967b1cab0dddc8fff78f53659c7d')        #LineBot's Channel secret
