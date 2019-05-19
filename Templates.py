@@ -147,8 +147,9 @@ def ExperienceTemplate():
               MessageTemplateAction(
                 label='Pop Dance Club',
                 text='Pop Dance Club details'
-              ),MessageTemplateAction(
-                label='Area Alumni Association',
+              ),
+              MessageTemplateAction(
+                label='Alumni Association',
                 text='Area Alumni Association details'
               )
             ]
