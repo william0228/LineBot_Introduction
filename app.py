@@ -5,6 +5,7 @@ from flask import Flask, request, abort
 from linebot import LineBotApi, WebhookHandler
 from linebot.exceptions import InvalidSignatureError 
 from linebot.models import *
+import os
 from Templates import *
 
 app = Flask(__name__)
@@ -34,24 +35,6 @@ def saveUserId(userId):
 	idFile.write(userId+';')
 	idFile.close()
 
-# Message handler function
-def MsgHandle(msg, event):
-	if msg == "help":
-		line_bot_api.reply_message(event.reply_token, InitialTemplate)
-	elif msg == "Start Introduction":
-		line_bot_api.reply_message(event.reply_token, TextSendMessage(text="IIIII!!"))
-	elif msg == "List Experience":
-		line_bot_api.reply_message(event.reply_token, TextSendMessage(text="EEEEEEX!!!"))
-	elif msg == "List Project":
-		line_bot_api.reply_message(event.reply_token, TextSendMessage(text="PPPPPPP!!!"))
-	elif msg == "List Professional & Extracurricular Experience":
-		line_bot_api.reply_message(event.reply_token, TextSendMessage(text="PEE!!!!"))
-	elif msg == "List Skill" :
-		line_bot_api.reply_message(event.reply_token, TextSendMessage(text="SSSSSS!!!"))
-	else:
-		line_bot_api.reply_message(event.reply_token, TextSendMessage(text="Without this command: Please enter \"help\""))
-	
-	return
 
 # 監聽所有來自 /callback 的 Post Request
 @app.route("/callback", methods=['POST'])
@@ -73,16 +56,17 @@ def callback():
 @handler.add(MessageEvent, message=TextMessage)
 def handle_message(event):
 
-	Message = InitialTemplate()
 	msg = event.message.text
 	#event.message.text就是用戶傳來的文字訊息
 
 	if msg == "help":
+		Message = InitialTemplate()
 		line_bot_api.reply_message(event.reply_token, Message)
 	elif msg == "Start Introduction":
 		line_bot_api.reply_message(event.reply_token, TextSendMessage(text="IIIII!!"))
 	elif msg == "List Education":
-		line_bot_api.reply_message(event.reply_token, TextSendMessage(text="EEEEEEX!!!"))
+		Message = IntroductionTemplate()
+		line_bot_api.reply_message(event.reply_token, Message)
 	elif msg == "List Project":
 		line_bot_api.reply_message(event.reply_token, TextSendMessage(text="PPPPPPP!!!"))
 	elif msg == "List Professional & Extracurricular Experience":
@@ -95,17 +79,18 @@ def handle_message(event):
 		user_id_set.add(userId)
 		saveUserId(userId)
 
-import os
+
 if __name__ == "__main__":
-	
-	idList = loadUserId()
-	if idList: user_id_set = set(idList)
 
-	try:
-		for userId in user_id_set:
-			line_bot_api.push_message(userId, TextSendMessage(text='LineBot is ready for you.'))  # Push API example
-	except Exception as e:
-		print(e)
+	while True:
+		idList = loadUserId()
+		if idList: user_id_set = set(idList)
 
-	port = int(os.environ.get('PORT', 5000))
-	app.run(host='0.0.0.0', port=port)
+		try:
+			for userId in user_id_set:
+				line_bot_api.push_message(userId, TextSendMessage(text='LineBot is ready for you.'))  # Push API example
+		except Exception as e:
+			print(e)
+
+		port = int(os.environ.get('PORT', 5000))
+		app.run(host='0.0.0.0', port=port)
