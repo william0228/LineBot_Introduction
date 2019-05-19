@@ -57,26 +57,41 @@ def callback():
 def handle_message(event):
 
 	msg = event.message.text
-	#event.message.text就是用戶傳來的文字訊息
 
+	# Start Section
 	if msg == "help":
 		Message = InitialTemplate()
 		line_bot_api.reply_message(event.reply_token, Message)
 	elif msg == "Start Introduction":
 		line_bot_api.reply_message(event.reply_token, TextSendMessage(text="IIIII!!"))
+	# Education Section
 	elif msg == "List Education":
-		Message = IntroductionTemplate()
+		Message = EducationTemplate()
 		line_bot_api.reply_message(event.reply_token, Message)
 	elif msg == "HSNU details":
-		Message = TextSendMessage(text='-Graduated from Mathematic and Science Gifted class\n-Team leader of Science Fair in Mathematic')
+		Message = TextSendMessage(text='-Graduated from Mathematic and Science Gifted class\n\n-Team leader of Science Fair in Mathematic')
 		line_bot_api.reply_message(event.reply_token, Message)
 	elif msg == "NCTU details":
-		Message = TextSendMessage(text='-Specialize in Network and Multimedia Engineering Program\n-Coursework: Machine Learning, Computer Network\n-Expected Date of Graduation: June 2020')
+		Message = TextSendMessage(text='-Specialize in Network and Multimedia Engineering Program\n\n-Coursework: Machine Learning, Computer Network\n\n-Expected Date of Graduation: June 2020')
 		line_bot_api.reply_message(event.reply_token, Message)
+	# Project Section
 	elif msg == "List Project":
-		line_bot_api.reply_message(event.reply_token, TextSendMessage(text="PPPPPPP!!!"))
+		Message = ProjectTemplate()
+		line_bot_api.reply_message(event.reply_token, Message)
+	elif msg == "iSport details":
+		Message = TextSendMessage(text='Built a Full-Stack online register/team-up/sign-up platform for National Chiao Tung University Office of Physical Education to help digitalize and improve the signup process')
+		line_bot_api.reply_message(event.reply_token, Message)
+	elif msg == "MLB details":
+		Message = TextSendMessage(text='Analyzed the data in MLB official website and designed a machine learning models to predict the salary of player and MLB fame of hall')
+		line_bot_api.reply_message(event.reply_token, Message)
+	elif msg == "Selflection details":
+		Message = TextSendMessage(text='Designed and developed 2D platform Action Adventure Game with features of player movement and special role changing skills')
+		line_bot_api.reply_message(event.reply_token, Message)
+	# Experience Section
 	elif msg == "List Professional & Extracurricular Experience":
-		line_bot_api.reply_message(event.reply_token, TextSendMessage(text="PEE!!!!"))
+		Message = ExperienceTemplate()
+		line_bot_api.reply_message(event.reply_token, Message)
+	# Defualt Section
 	else:
 		line_bot_api.reply_message(event.reply_token, TextSendMessage(text="Without this command: Please enter \"help\""))
 	

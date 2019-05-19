@@ -35,10 +35,10 @@ def InitialTemplate():
   )
 
 
-def IntroductionTemplate():
+def EducationTemplate():
   return(
     TemplateSendMessage(
-      alt_text='Brief Introduction Template',
+      alt_text='Education',
       template=CarouselTemplate(
         columns=[
           CarouselColumn(
@@ -60,6 +60,96 @@ def IntroductionTemplate():
               MessageTemplateAction(
                 label='More details',
                 text='NCTU details'
+              )
+            ]
+          )
+        ]
+      )
+    )
+  )
+
+
+def ProjectTemplate():
+  return(
+    TemplateSendMessage(
+      alt_text='Project',
+      template=CarouselTemplate(
+        columns=[
+          CarouselColumn(
+            thumbnail_image_url='https://imgur.com/G9EAmGu.png',
+            title='iSport',
+            text='Tools: JavaScript, MySQL and NodeJS',
+            actions=[
+              MessageTemplateAction(
+                label='More details',
+                text='iSport details'
+              )
+            ]
+          ),
+          CarouselColumn(
+            thumbnail_image_url='https://imgur.com/MRGiR1j.jpg',
+            title='MLB Prediction',
+            text='Tools: Python',
+            actions=[
+              MessageTemplateAction(
+                label='More details',
+                text='MLB details'
+              )
+            ]
+          ),
+          CarouselColumn(
+            thumbnail_image_url='https://imgur.com/MRGiR1j.jpg',
+            title='Selflection',
+            text='Tools: Unity and C#',
+            actions=[
+              MessageTemplateAction(
+                label='More details',
+                text='Selflection details'
+              )
+            ]
+          )
+        ]
+      )
+    )
+  )
+
+
+def ExperienceTemplate():
+  return(
+    TemplateSendMessage(
+      alt_text='Experience',
+      template=CarouselTemplate(
+        columns=[
+          CarouselColumn(
+            thumbnail_image_url='https://imgur.com/G9EAmGu.png',
+            title='iSport',
+            text='Tools: JavaScript, MySQL and NodeJS',
+            actions=[
+              MessageTemplateAction(
+                label='More details',
+                text='iSport details'
+              )
+            ]
+          ),
+          CarouselColumn(
+            thumbnail_image_url='https://imgur.com/MRGiR1j.jpg',
+            title='MLB Prediction',
+            text='Tools: Python',
+            actions=[
+              MessageTemplateAction(
+                label='More details',
+                text='MLB details'
+              )
+            ]
+          ),
+          CarouselColumn(
+            thumbnail_image_url='https://imgur.com/MRGiR1j.jpg',
+            title='Selflection',
+            text='Tools: Unity and C#',
+            actions=[
+              MessageTemplateAction(
+                label='More details',
+                text='Selflection details'
               )
             ]
           )
