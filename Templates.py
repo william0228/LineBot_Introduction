@@ -121,7 +121,7 @@ def ExperienceTemplate():
       template=CarouselTemplate(
         columns=[
           CarouselColumn(
-            #thumbnail_image_url='https://imgur.com/G9EAmGu.png',
+            thumbnail_image_url='https://imgur.com/G9EAmGu.png',
             title='Professional Experience',
             text='Experience that more academic',
             actions=[
@@ -136,7 +136,7 @@ def ExperienceTemplate():
             ]
           ),
           CarouselColumn(
-            #thumbnail_image_url='https://imgur.com/MRGiR1j.jpg',
+            thumbnail_image_url='https://imgur.com/MRGiR1j.jpg',
             title='Other Experience',
             text='Experience of Club or Organization',
             actions=[
