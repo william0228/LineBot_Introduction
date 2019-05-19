@@ -64,6 +64,7 @@ def handle_message(event):
 		line_bot_api.reply_message(event.reply_token, Message)
 	elif msg == "Start Introduction":
 		line_bot_api.reply_message(event.reply_token, TextSendMessage(text="IIIII!!"))
+		line_bot_api.reply_message(event.reply_token, TextSendMessage(text="IIIIQ!!"))
 	elif msg == "List Education":
 		Message = IntroductionTemplate()
 		line_bot_api.reply_message(event.reply_token, Message)
