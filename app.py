@@ -67,6 +67,12 @@ def handle_message(event):
 	elif msg == "List Education":
 		Message = IntroductionTemplate()
 		line_bot_api.reply_message(event.reply_token, Message)
+	elif msg == "HSNU details":
+		Message = TextSendMessage(text='-Graduated from Mathematic and Science Gifted class\n-Team leader of Science Fair in Mathematic')
+		line_bot_api.reply_message(event.reply_token, Message)
+	elif msg == "NCTU details":
+		Message = TextSendMessage(text='-Specialize in Network and Multimedia Engineering Program\n-Coursework: Machine Learning, Computer Network\n-Expected Date of Graduation: June 2020')
+		line_bot_api.reply_message(event.reply_token, Message)
 	elif msg == "List Project":
 		line_bot_api.reply_message(event.reply_token, TextSendMessage(text="PPPPPPP!!!"))
 	elif msg == "List Professional & Extracurricular Experience":

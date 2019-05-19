@@ -48,7 +48,7 @@ def IntroductionTemplate():
             actions=[
               MessageTemplateAction(
                 label='More details',
-                text='-	Graduated from Mathematic and Science Gifted class\n-	Team leader of Science Fair in Mathematic'
+                text='HSNU details'
               )
             ]
           ),
@@ -59,7 +59,7 @@ def IntroductionTemplate():
             actions=[
               MessageTemplateAction(
                 label='More details',
-                text='-	Specialize in Network and Multimedia Engineering Program\n-	Coursework: Machine Learning, Computer Network\n-	Expected Date of Graduation: June 2020'
+                text='NCTU details'
               )
             ]
           )
