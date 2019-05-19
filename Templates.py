@@ -13,9 +13,9 @@ def InitialTemplate():
         title='Introduction',
         text="Please click the botton",
         actions=[
-          MessageTemplateAction(
+          PostbackTemplateAction(
             label="Brief Introduction",
-            text="Start Introduction"
+            data="Start Introduction"
           ),
           MessageTemplateAction(
             label="Education",
