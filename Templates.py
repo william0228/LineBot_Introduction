@@ -13,9 +13,9 @@ def InitialTemplate():
         title='Introduction',
         text="Please click the botton",
         actions=[
-          PostbackTemplateAction(
+          MessageTemplateAction(
             label="Brief Introduction",
-            data="Start Introduction"
+            text="Start Introduction"
           ),
           MessageTemplateAction(
             label="Education",
@@ -44,40 +44,22 @@ def IntroductionTemplate():
           CarouselColumn(
             thumbnail_image_url='https://imgur.com/G9EAmGu.png',
             title='Senior High',
-            text='Graduated',
+            text='Affiliated Senior High of National Taiwan Normal University',
             actions=[
-              PostbackTemplateAction(
-                label='postback1',
-                text='postback text1',
-                data='action=buy&itemid=1'
-              ),
               MessageTemplateAction(
-                label='message1',
-                text='message text1'
-              ),
-              URITemplateAction(
-                label='uri1',
-                uri='http://example.com/1'
+                label='More details',
+                text='-	Graduated from Mathematic and Science Gifted class\n-	Team leader of Science Fair in Mathematic'
               )
             ]
           ),
           CarouselColumn(
             thumbnail_image_url='https://imgur.com/MRGiR1j.jpg',
-            title='National Chiao Tung University',
-            text='QQ',
+            title='University',
+            text='National Chiao Tung University',
             actions=[
-              PostbackTemplateAction(
-                label='postback1',
-                text='postback text1',
-                data='action=buy&itemid=1'
-              ),
               MessageTemplateAction(
-                label='message1',
-                text='message text1'
-              ),
-              URITemplateAction(
-                label='uri1',
-                uri='http://example.com/1'
+                label='More details',
+                text='-	Specialize in Network and Multimedia Engineering Program\n-	Coursework: Machine Learning, Computer Network\n-	Expected Date of Graduation: June 2020'
               )
             ]
           )
