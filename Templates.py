@@ -141,15 +141,15 @@ def ExperienceTemplate():
             text='Experience of Club or Organization',
             actions=[
               MessageTemplateAction(
-                label='Student Association',
+                label='Student',
                 text='Student Association details'
               ),
               MessageTemplateAction(
-                label='Pop Dance Club',
+                label='PDC',
                 text='Pop Dance Club details'
               ),
               MessageTemplateAction(
-                label='Area Alumni Association',
+                label='Area Alumni',
                 text='Area Alumni Association details'
               )
             ]
