@@ -43,13 +43,13 @@ def IntroductionTemplate():
         columns=[
           CarouselColumn(
             thumbnail_image_url='https://imgur.com/G9EAmGu.png',
-            title='Senior High: Affiliated Senior High School of National Taiwan Normal University',
-            text='- Graduated from Mathematic and Science Gifted class \n- Team leader of Science Fair in Mathematic'
+            title='Senior High',
+            text='Graduated '
           ),
           CarouselColumn(
             thumbnail_image_url='https://imgur.com/MRGiR1j.jpg',
-            title='University: National Chiao Tung University',
-            text='-	Specialize in Network and Multimedia Engineering Program \n- Coursework: Machine Learning, Computer Network \n- Expected Date of Graduation: June 2020'
+            title='University',
+            text='Specialize'
           )
         ]
       )
