@@ -122,35 +122,35 @@ def ExperienceTemplate():
         columns=[
           CarouselColumn(
             thumbnail_image_url='https://imgur.com/G9EAmGu.png',
-            title='Professional Experience',
+            title='Professional',
             text='Experience that more academic',
             actions=[
               MessageTemplateAction(
-                label='More details',
-                text='MLB details'
+                label='AmCAD .CORP',
+                text='AmCAD .CORP details'
               ),
               MessageTemplateAction(
-                label='More details',
-                text='MLB details'
+                label='NCTU+',
+                text='NCTU+ Organization details'
               )
             ]
           ),
           CarouselColumn(
             thumbnail_image_url='https://imgur.com/MRGiR1j.jpg',
-            title='Other Experience',
+            title='Others',
             text='Experience of Club or Organization',
             actions=[
               MessageTemplateAction(
-                label='More details',
-                text='MLB details'
+                label='Student',
+                text='Student Association details'
               ),
               MessageTemplateAction(
-                label='More details',
-                text='MLB details'
+                label='PDC',
+                text='Pop Dance Club details'
               ),
               MessageTemplateAction(
-                label='More details',
-                text='MLB details'
+                label='Area Alumni',
+                text='Area Alumni Association details'
               )
             ]
           )
