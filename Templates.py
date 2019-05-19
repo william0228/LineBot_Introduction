@@ -44,7 +44,7 @@ def IntroductionTemplate():
           CarouselColumn(
             thumbnail_image_url='https://imgur.com/G9EAmGu.png',
             title='Senior High',
-            text='National Chiao Tung University',
+            text='Graduated',
             actions=[
               PostbackTemplateAction(
                 label='postback1',
@@ -63,8 +63,8 @@ def IntroductionTemplate():
           ),
           CarouselColumn(
             thumbnail_image_url='https://imgur.com/MRGiR1j.jpg',
-            title='University: National Chiao Tung University',
-            text='Specialize',
+            title='University',
+            text='National Chiao Tung University',
             actions=[
               PostbackTemplateAction(
                 label='postback1',
