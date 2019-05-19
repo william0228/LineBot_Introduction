@@ -123,7 +123,7 @@ def ExperienceTemplate():
           CarouselColumn(
             thumbnail_image_url='https://imgur.com/G9EAmGu.png',
             title='Professional',
-            text='Experience that more academic',
+            text='Experience',
             actions=[
               MessageTemplateAction(
                 label='AmCAD .CORP',
@@ -138,7 +138,7 @@ def ExperienceTemplate():
           CarouselColumn(
             thumbnail_image_url='https://imgur.com/MRGiR1j.jpg',
             title='Others',
-            text='Experience of Club or Organization',
+            text='Experience',
             actions=[
               MessageTemplateAction(
                 label='Student',
