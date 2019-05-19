@@ -43,7 +43,7 @@ def IntroductionTemplate():
         columns=[
           CarouselColumn(
             thumbnail_image_url='https://imgur.com/G9EAmGu.png',
-            title='Senior High',
+            title='Senior High: Affiliated Senior High School of National Taiwan Normal University',
             text='Graduated',
             actions=[
               PostbackTemplateAction(
@@ -63,7 +63,7 @@ def IntroductionTemplate():
           ),
           CarouselColumn(
             thumbnail_image_url='https://imgur.com/MRGiR1j.jpg',
-            title='University',
+            title='University: National Chiao Tung University',
             text='Specialize',
             actions=[
               PostbackTemplateAction(
