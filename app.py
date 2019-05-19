@@ -91,6 +91,21 @@ def handle_message(event):
 	elif msg == "List Professional & Extracurricular Experience":
 		Message = ExperienceTemplate()
 		line_bot_api.reply_message(event.reply_token, Message)
+	elif msg == "AmCAD .CORP details":
+		Message = TextSendMessage(text='-Intern in 2018/7 ~ 2018/9\n\n-Added \"Area Selecting Feature\" and \"Parameter Calculating Feature\" in Tumor Detective Instrument\n\n-Changed its stand-alone version into website version and successfully launched and improved user experience flow')
+		line_bot_api.reply_message(event.reply_token, Message)
+	elif msg == "NCTU+ Organization details":
+		Message = TextSendMessage(text='-FrontEnd designer\n\n-Developed all the pages in NCTU plus into Responsive Web Design pages\n\n-Designed Home page and Navber of NCTU plus website by using React JS')
+		line_bot_api.reply_message(event.reply_token, Message)
+	elif msg == "Student Association details":
+		Message = TextSendMessage(text='-Information department\n\n-Website maintenance, Database Management, photography\n\n-Hosted NTU. NTHU. NCTU joint Program competition')
+		line_bot_api.reply_message(event.reply_token, Message)
+	elif msg == "Pop Dance Club details":
+		Message = TextSendMessage(text='-Public relation chair\n\n-Proposal writing and Copywriting\n\n-Solicit sponsorship from companies such as Red bull')
+		line_bot_api.reply_message(event.reply_token, Message)
+	elif msg == "Area Alumni Association details":
+		Message = TextSendMessage(text='-Event planning chair\n\n-Presided over the activities, Event arrangement\n\n-Organize events such as 3-day freshman orientation and winter camp for computer study club')
+		line_bot_api.reply_message(event.reply_token, Message)
 	# Defualt Section
 	else:
 		line_bot_api.reply_message(event.reply_token, TextSendMessage(text="Without this command: Please enter \"help\""))
