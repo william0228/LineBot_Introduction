@@ -44,12 +44,42 @@ def IntroductionTemplate():
           CarouselColumn(
             thumbnail_image_url='https://imgur.com/G9EAmGu.png',
             title='Senior High',
-            text='Graduated '
+            text='Graduated',
+            actions=[
+              PostbackTemplateAction(
+                label='postback1',
+                text='postback text1',
+                data='action=buy&itemid=1'
+              ),
+              MessageTemplateAction(
+                label='message1',
+                text='message text1'
+              ),
+              URITemplateAction(
+                label='uri1',
+                uri='http://example.com/1'
+              )
+            ]
           ),
           CarouselColumn(
             thumbnail_image_url='https://imgur.com/MRGiR1j.jpg',
             title='University',
-            text='Specialize'
+            text='Specialize',
+            actions=[
+              PostbackTemplateAction(
+                label='postback1',
+                text='postback text1',
+                data='action=buy&itemid=1'
+              ),
+              MessageTemplateAction(
+                label='message1',
+                text='message text1'
+              ),
+              URITemplateAction(
+                label='uri1',
+                uri='http://example.com/1'
+              )
+            ]
           )
         ]
       )
