@@ -126,12 +126,12 @@ def ExperienceTemplate():
             text='Experience that more academic',
             actions=[
               MessageTemplateAction(
-                label='AmCAD .CORP',
-                text='AmCAD .CORP details'
+                label='More details',
+                text='MLB details'
               ),
               MessageTemplateAction(
-                label='NCTU+',
-                text='NCTU+ Organization details'
+                label='More details',
+                text='MLB details'
               )
             ]
           ),
@@ -141,16 +141,16 @@ def ExperienceTemplate():
             text='Experience of Club or Organization',
             actions=[
               MessageTemplateAction(
-                label='Student',
-                text='Student Association details'
+                label='More details',
+                text='MLB details'
               ),
               MessageTemplateAction(
-                label='PDC',
-                text='Pop Dance Club details'
+                label='More details',
+                text='MLB details'
               ),
               MessageTemplateAction(
-                label='Area Alumni',
-                text='Area Alumni Association details'
+                label='More details',
+                text='MLB details'
               )
             ]
           )
