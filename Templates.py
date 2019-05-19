@@ -64,7 +64,7 @@ def IntroductionTemplate():
           CarouselColumn(
             thumbnail_image_url='https://imgur.com/MRGiR1j.jpg',
             title='University',
-            text='- National Chiao Tung University\n-	Specialize in Network and Multimedia Engineering Program\n-	Coursework: Machine Learning, Computer Network\n-	Expected Date of Graduation: June 2020',
+            text='- National Chiao Tung University\n-	Specialize in Network and Multimedia Engineering Program\n',
             actions=[
               PostbackTemplateAction(
                 label='postback1',
