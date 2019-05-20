@@ -57,19 +57,7 @@ def callback():
 def handle_message(event):
 
 	msg = event.message.text
-
-	#######
-	idList = loadUserId()
-	if idList: user_id_set = set(idList)
-
-	try:
-		for userId in user_id_set:
-			line_bot_api.push_message(userId, TextSendMessage(text='LineBot is ready for you.'))
-	except Exception as e:
-		print(e)
-	#######
-
-	profile = line_bot_api.get_profile(event.source.user_id)
+	UserId = line_bot_api.get_profile(event.source.user_id).user_id
 
 	# Start Section
 	if msg == "help":
@@ -84,9 +72,7 @@ def handle_message(event):
 	elif msg == "HSNU details":
 		Message = TextSendMessage(text='-Graduated from Mathematic and Science Gifted class\n\n-Team leader of Science Fair in Mathematic')
 		line_bot_api.reply_message(event.reply_token, Message)
-		qq = TextSendMessage(text=profile.user_id)
-		line_bot_api.push_message('U85c186cd2f9c051c30c24c1fe7d9cb44', EducationTemplate())
-		line_bot_api.push_message('U85c186cd2f9c051c30c24c1fe7d9cb44', qq)
+		line_bot_api.push_message(UserId, EducationTemplate())
 	elif msg == "NCTU details":
 		Message = TextSendMessage(text='-Specialize in Network and Multimedia Engineering Program\n\n-Coursework: Machine Learning, Computer Network\n\n-Expected Date of Graduation: June 2020')
 		line_bot_api.reply_message(event.reply_token, Message)
@@ -134,13 +120,6 @@ def handle_message(event):
 	else:
 		Message = TextSendMessage(text='Without command \"' + msg + '\"\nPlease enter \"help\" to continue')
 		line_bot_api.reply_message(event.reply_token, Message)
-	
-	
-
-	userId = event.source.user_id
-	if not userId in user_id_set:
-		user_id_set.add(userId)
-		saveUserId(userId)
 
 
 if __name__ == "__main__":
