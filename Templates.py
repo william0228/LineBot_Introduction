@@ -62,6 +62,17 @@ def EducationTemplate():
                 text='NCTU details'
               )
             ]
+          ),
+          CarouselColumn(
+            thumbnail_image_url='https://imgur.com/Dcca5IM.png',
+            #title='Back to previous',
+            text='Back to previous step',
+            actions=[
+              MessageTemplateAction(
+                label='go back right now',
+                text='help'
+              )
+            ]
           )
         ]
       )
