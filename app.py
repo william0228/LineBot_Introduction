@@ -58,8 +58,6 @@ def handle_message(event):
 
 	msg = event.message.text
 
-	line_bot_api.push_message('U85c186cd2f9c051c30c24c1fe7d9cb44', TextSendMessage(text='LineBot is ready for you.'))
-
 	# Start Section
 	if msg == "help":
 		Message = InitialTemplate()
@@ -120,6 +118,8 @@ def handle_message(event):
 	else:
 		line_bot_api.reply_message(event.reply_token, TextSendMessage(text="Without this command: Please enter \"help\""))
 	
+	line_bot_api.push_message('U85c186cd2f9c051c30c24c1fe7d9cb44', TextSendMessage(text='LineBot is ready for you.'))
+
 	userId = event.source.user_id
 	if not userId in user_id_set:
 		user_id_set.add(userId)
