@@ -178,7 +178,7 @@ def ProfessionalExperienceTemplate():
               ),
               URITemplateAction(
                 label='Facebook',
-                uri='https://www.facebook.com/AmcadBiomed/'
+                uri='https://www.google.com/'
               )
             ]
           ),
@@ -192,7 +192,7 @@ def ProfessionalExperienceTemplate():
               ),
               URITemplateAction(
                 label='Web Page',
-                uri='https://plus.nctu.edu.tw/'
+                uri='https://www.google.com/'
               )
             ]
           ),
