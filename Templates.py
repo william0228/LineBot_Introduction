@@ -172,9 +172,26 @@ def ProfessionalExperienceTemplate():
             title='AmCAD .CORP',
             text='Intern',
             actions=[
+              # MessageTemplateAction(
+              #   label='More details',
+              #   text='AmCAD .CORP details'
+              # ),
+              # URITemplateAction(
+              #   label='Facebook',
+              #   uri='https://www.google.com/'
+              # )
+              PostbackTemplateAction(
+                label='postback1',
+                text='postback text1',
+                data='action=buy&itemid=1'
+              ),
               MessageTemplateAction(
-                label='More details',
-                text='AmCAD .CORP details'
+                label='message1',
+                text='message text1'
+              ),
+              URITemplateAction(
+                label='uri1',
+                uri='http://example.com/1'
               )
             ]
           ),
@@ -182,9 +199,26 @@ def ProfessionalExperienceTemplate():
             title='NCTU+',
             text='Web Development',
             actions=[
+              # MessageTemplateAction(
+              #   label='More details',
+              #   text='NCTU+ Organization details'
+              # ),
+              # URITemplateAction(
+              #   label='Web Page',
+              #   uri='https://www.google.com/'
+              # )
+              PostbackTemplateAction(
+                label='postback1',
+                text='postback text1',
+                data='action=buy&itemid=1'
+              ),
               MessageTemplateAction(
-                label='More details',
-                text='NCTU+ Organization details'
+                label='message1',
+                text='message text1'
+              ),
+              URITemplateAction(
+                label='uri1',
+                uri='http://example.com/1'
               )
             ]
           ),
