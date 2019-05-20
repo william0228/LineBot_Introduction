@@ -172,13 +172,9 @@ def ProfessionalExperienceTemplate():
             title='AmCAD .CORP',
             text='Intern',
             actions=[
-              MessageTemplateAction(
-                label='關於Maso百貨',
-                text='Maso萬事屋百貨是什麼呢？'
-              ),
               URITemplateAction(
-                label='點我逛百貨',
-                uri='https://tw.shop.com/maso0310'
+                label='Facebook',
+                uri='https://www.facebook.com/AmcadBiomed/'
               )
             ]
           ),
@@ -186,13 +182,9 @@ def ProfessionalExperienceTemplate():
             title='NCTU+',
             text='Web Development',
             actions=[
-              MessageTemplateAction(
-                label='關於Maso百貨',
-                text='Maso萬事屋百貨是什麼呢？'
-              ),
               URITemplateAction(
-                label='點我逛百貨',
-                uri='https://tw.shop.com/maso0310'
+                label='Web Page',
+                uri='https://plus.nctu.edu.tw/'
               )
             ]
           ),
