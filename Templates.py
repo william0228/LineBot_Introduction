@@ -87,7 +87,7 @@ def ProjectTemplate():
       template=CarouselTemplate(
         columns=[
           CarouselColumn(
-            thumbnail_image_url='https://imgur.com/G9EAmGu.png',
+            thumbnail_image_url='https://imgur.com/MpzVFr4.png',
             title='iSport',
             text='Tools: JavaScript, MySQL and NodeJS',
             actions=[
@@ -98,7 +98,7 @@ def ProjectTemplate():
             ]
           ),
           CarouselColumn(
-            thumbnail_image_url='https://imgur.com/MRGiR1j.jpg',
+            thumbnail_image_url='https://imgur.com/sUZSMl2.jpeg',
             title='MLB Prediction',
             text='Tools: Python',
             actions=[
@@ -109,7 +109,7 @@ def ProjectTemplate():
             ]
           ),
           CarouselColumn(
-            thumbnail_image_url='https://imgur.com/MRGiR1j.jpg',
+            thumbnail_image_url='https://imgur.com/M3qiFAB.png',
             title='Selflection',
             text='Tools: Unity and C#',
             actions=[
@@ -195,7 +195,7 @@ def ProfessionalExperienceTemplate():
             actions=[
               MessageTemplateAction(
                 label='go back right now',
-                text='help'
+                text='List Experience'
               )
             ]
           )
@@ -248,7 +248,7 @@ def OtherExperienceTemplate():
             actions=[
               MessageTemplateAction(
                 label='go back right now',
-                text='help'
+                text='List Experience'
               )
             ]
           )

@@ -66,7 +66,7 @@ def handle_message(event):
 		line_bot_api.reply_message(event.reply_token, Message1)
 	# Introduction Section
 	elif msg == "Start Introduction":
-		Message = TextSendMessage(text='My name is Song-Yun Wang, a junior student at Taiwan National Chiao Tung University.\nMy goal of designing computer games or applications urges me to study in various fields such as machine learning, Internet of Things and computer networks.\nIn extracurricular activities, I join many clubs to enhance my skills which are not just about courses just like pop dance club and student association of computer science. I also have many interests such as singing, hip- hop dance and playing volleyball.')
+		Message = TextSendMessage(text='My name is Song-Yun Wang, a junior student at Taiwan National Chiao Tung University.\n\nMy goal of designing computer games or applications urges me to study in various fields such as machine learning, Internet of Things and computer networks.\n\nIn extracurricular activities, I join many clubs to enhance my skills which are not just about courses just like pop dance club and student association of computer science. I also have many interests such as singing, hip-hop dance and playing volleyball.')
 		line_bot_api.reply_message(event.reply_token, Message)
 		time.sleep(3)
 		line_bot_api.push_message(UserId, InitialTemplate())
