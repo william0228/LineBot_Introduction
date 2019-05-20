@@ -117,9 +117,24 @@ def ProjectTemplate():
 def ExperienceTemplate():
   return(
     TemplateSendMessage(
-      alt_text='Project',
+      alt_text='Experience',
       template=CarouselTemplate(
         columns=[
+          CarouselColumn(
+            thumbnail_image_url='https://imgur.com/G9EAmGu.png',
+            title='Professional Experience',
+            text='Experience that more academic',
+            actions=[
+              MessageTemplateAction(
+                label='AmCAD .CORP',
+                text='AmCAD .CORP details'
+              ),
+              MessageTemplateAction(
+                label='NCTU+',
+                text='NCTU+ Organization details'
+              )
+            ]
+          ),
           CarouselColumn(
             thumbnail_image_url='https://imgur.com/G9EAmGu.png',
             title='iSport',
