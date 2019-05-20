@@ -156,17 +156,6 @@ def ExperienceTemplate():
                 text='MLB details'
               )
             ]
-          ),
-          CarouselColumn(
-            thumbnail_image_url='https://imgur.com/MRGiR1j.jpg',
-            title='Selflection',
-            text='Tools: Unity and C#',
-            actions=[
-              MessageTemplateAction(
-                label='More details',
-                text='Selflection details'
-              )
-            ]
           )
         ]
       )
