@@ -12,9 +12,9 @@ from Templates import *
 app = Flask(__name__)
 
 # Channel Access Token
-line_bot_api = LineBotApi('+9rpd2oXUcgm3U9JiTomwNwaQPxJJ88D+uGsMPldakfgX1ekAzjNdHHMaMXVOcrLUGp46BKsYlOF6ot/I+WZQ/vk3BxdYlEMTEA2/vaPS6GDorKNX/f6d7rWME28N8kchJAxnSyTw0fQDfks7uauoAdB04t89/1O/w1cDnyilFU=')
+line_bot_api = LineBotApi('Channel Access Token')
 # Channel Secret
-handler = WebhookHandler('bae0967b1cab0dddc8fff78f53659c7d')
+handler = WebhookHandler('Channel Secret')
 
 
 # UserID handler
