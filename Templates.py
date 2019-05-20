@@ -130,8 +130,8 @@ def ExperienceTemplate():
                 text='AmCAD details'
               ),
               MessageTemplateAction(
-                label='NCTU+',
-                text='NCTU+ details'
+                label='NCTU',
+                text='NCTU details'
               )
             ]
           ),
