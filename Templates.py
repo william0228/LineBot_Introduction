@@ -119,7 +119,6 @@ def ExperienceTemplate():
     TemplateSendMessage(
       alt_text='Experience',
       template=ButtonsTemplate(
-        #thumbnail_image_url='https://imgur.com/1WCRDsm.jpg',
         title='Experience',
         text="Please click the botton",
         actions=[
@@ -144,7 +143,6 @@ def ProfessionalExperienceTemplate():
       template=CarouselTemplate(
         columns=[
           CarouselColumn(
-            #thumbnail_image_url='https://imgur.com/G9EAmGu.png',
             title='AmCAD .CORP',
             text='Intern',
             actions=[
@@ -155,7 +153,6 @@ def ProfessionalExperienceTemplate():
             ]
           ),
           CarouselColumn(
-            #thumbnail_image_url='https://imgur.com/MRGiR1j.jpg',
             title='NCTU+',
             text='Web Development',
             actions=[
@@ -178,7 +175,6 @@ def OtherExperienceTemplate():
       template=CarouselTemplate(
         columns=[
           CarouselColumn(
-            #thumbnail_image_url='https://imgur.com/G9EAmGu.png',
             title='Student Association',
             text='Information Department',
             actions=[
@@ -189,7 +185,6 @@ def OtherExperienceTemplate():
             ]
           ),
           CarouselColumn(
-            #thumbnail_image_url='https://imgur.com/MRGiR1j.jpg',
             title='Pop Dance Club+',
             text='Public Relation Chair',
             actions=[
@@ -200,7 +195,6 @@ def OtherExperienceTemplate():
             ]
           ),
           CarouselColumn(
-            #thumbnail_image_url='https://imgur.com/MRGiR1j.jpg',
             title='Area Alumni Association+',
             text='Event Planning Chair',
             actions=[

@@ -36,7 +36,7 @@ def saveUserId(userId):
 	idFile.close()
 
 
-# 監聽所有來自 /callback 的 Post Request
+# listen Post Request from /callback
 @app.route("/callback", methods=['POST'])
 def callback():
 	# get X-Line-Signature header value
@@ -57,7 +57,7 @@ def callback():
 def handle_message(event):
 
 	msg = event.message.text
-
+	line_bot_api.push_message('U85c186cd2f9c051c30c24c1fe7d9cb44', TextSendMessage(text='LineBot is ready for you.'))
 	# Start Section
 	if msg == "help":
 		Message = InitialTemplate()
@@ -132,7 +132,7 @@ if __name__ == "__main__":
 
 		try:
 			for userId in user_id_set:
-				line_bot_api.push_message(userId, TextSendMessage(text='LineBot is ready for you.'))  # Push API example
+				line_bot_api.push_message('U85c186cd2f9c051c30c24c1fe7d9cb44', TextSendMessage(text='LineBot is ready for you.'))
 		except Exception as e:
 			print(e)
 
