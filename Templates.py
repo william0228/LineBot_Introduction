@@ -172,26 +172,13 @@ def ProfessionalExperienceTemplate():
             title='AmCAD .CORP',
             text='Intern',
             actions=[
-              # MessageTemplateAction(
-              #   label='More details',
-              #   text='AmCAD .CORP details'
-              # ),
-              # URITemplateAction(
-              #   label='Facebook',
-              #   uri='https://www.google.com/'
-              # )
-              PostbackTemplateAction(
-                label='postback1',
-                text='postback text1',
-                data='action=buy&itemid=1'
-              ),
               MessageTemplateAction(
-                label='message1',
-                text='message text1'
+                label='關於Maso百貨',
+                text='Maso萬事屋百貨是什麼呢？'
               ),
               URITemplateAction(
-                label='uri1',
-                uri='http://example.com/1'
+                label='點我逛百貨',
+                uri='https://tw.shop.com/maso0310'
               )
             ]
           ),
@@ -199,26 +186,13 @@ def ProfessionalExperienceTemplate():
             title='NCTU+',
             text='Web Development',
             actions=[
-              # MessageTemplateAction(
-              #   label='More details',
-              #   text='NCTU+ Organization details'
-              # ),
-              # URITemplateAction(
-              #   label='Web Page',
-              #   uri='https://www.google.com/'
-              # )
-              PostbackTemplateAction(
-                label='postback1',
-                text='postback text1',
-                data='action=buy&itemid=1'
-              ),
               MessageTemplateAction(
-                label='message1',
-                text='message text1'
+                label='關於Maso百貨',
+                text='Maso萬事屋百貨是什麼呢？'
               ),
               URITemplateAction(
-                label='uri1',
-                uri='http://example.com/1'
+                label='點我逛百貨',
+                uri='https://tw.shop.com/maso0310'
               )
             ]
           ),
