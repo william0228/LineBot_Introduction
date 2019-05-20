@@ -69,6 +69,8 @@ def handle_message(event):
 		print(e)
 	#######
 
+	profile = line_bot_api.get_profile(event.source.user_id)
+
 	# Start Section
 	if msg == "help":
 		Message1 = InitialTemplate()
@@ -82,7 +84,7 @@ def handle_message(event):
 	elif msg == "HSNU details":
 		Message = TextSendMessage(text='-Graduated from Mathematic and Science Gifted class\n\n-Team leader of Science Fair in Mathematic')
 		line_bot_api.reply_message(event.reply_token, Message)
-		qq = TextSendMessage(text='qq')
+		qq = TextSendMessage(text=profile.display_name)
 		line_bot_api.push_message('U85c186cd2f9c051c30c24c1fe7d9cb44', EducationTemplate())
 		line_bot_api.push_message('U85c186cd2f9c051c30c24c1fe7d9cb44', qq)
 	elif msg == "NCTU details":
