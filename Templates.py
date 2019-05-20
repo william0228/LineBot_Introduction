@@ -130,7 +130,7 @@ def ExperienceTemplate():
           MessageTemplateAction(
             label="Other",
             text="List Other Experience"
-          )]
+          )
         ]
       )
     )
