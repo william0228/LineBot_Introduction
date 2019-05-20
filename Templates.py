@@ -128,6 +128,10 @@ def ExperienceTemplate():
               MessageTemplateAction(
                 label='AmCAD .CORP',
                 text='AmCAD .CORP details'
+              ),
+              MessageTemplateAction(
+                label='NCTU+',
+                text='NCTU+ Organization details'
               )
             ]
           ),
