@@ -60,13 +60,13 @@ def handle_message(event):
 
 	# Start Section
 	if msg == "help":
-		Message = InitialTemplate()
+		Message1 = InitialTemplate()
 		line_bot_api.reply_message(event.reply_token, Message)
 	elif msg == "Start Introduction":
 		line_bot_api.reply_message(event.reply_token, TextSendMessage(text="IIIII!!"))
 	# Education Section
 	elif msg == "List Education":
-		Message = EducationTemplate()
+		Message1 = EducationTemplate()
 		line_bot_api.reply_message(event.reply_token, Message)
 	elif msg == "HSNU details":
 		Message = TextSendMessage(text='-Graduated from Mathematic and Science Gifted class\n\n-Team leader of Science Fair in Mathematic')
@@ -76,7 +76,7 @@ def handle_message(event):
 		line_bot_api.reply_message(event.reply_token, Message)
 	# Project Section
 	elif msg == "List Project":
-		Message = ProjectTemplate()
+		Message1 = ProjectTemplate()
 		line_bot_api.reply_message(event.reply_token, Message)
 	elif msg == "iSport details":
 		Message = TextSendMessage(text='Built a Full-Stack online register/team-up/sign-up platform for National Chiao Tung University Office of Physical Education to help digitalize and improve the signup process')
@@ -89,11 +89,11 @@ def handle_message(event):
 		line_bot_api.reply_message(event.reply_token, Message)
 	# Experience Section
 	elif msg == "List Experience":
-		Message = ExperienceTemplate()
+		Message1 = ExperienceTemplate()
 		line_bot_api.reply_message(event.reply_token, Message)
 		# Professional Experience Section
 	elif msg == "List Professional Experience":
-		Message = ProfessionalExperienceTemplate()
+		Message1 = ProfessionalExperienceTemplate()
 		line_bot_api.reply_message(event.reply_token, Message)
 	elif msg == "AmCAD .CORP details":
 		Message = TextSendMessage(text='-Intern in 2018/7 ~ 2018/9\n\n-Added \"Area Selecting Feature\" and \"Parameter Calculating Feature\" in Tumor Detective Instrument\n\n-Changed its stand-alone version into website version and successfully launched and improved user experience flow')
@@ -103,7 +103,7 @@ def handle_message(event):
 		line_bot_api.reply_message(event.reply_token, Message)
 		# Other Experience Section
 	elif msg == "List Other Experience":
-		Message = OtherExperienceTemplate()
+		Message1 = OtherExperienceTemplate()
 		line_bot_api.reply_message(event.reply_token, Message)
 	elif msg == "Student Association details":
 		Message = TextSendMessage(text='-Information department\n\n-Website maintenance, Database Management, photography\n\n-Hosted NTU. NTHU. NCTU joint Program competition')
@@ -116,9 +116,10 @@ def handle_message(event):
 		line_bot_api.reply_message(event.reply_token, Message)
 	# Defualt Section
 	else:
-		line_bot_api.reply_message(event.reply_token, TextSendMessage(text="Without this command: Please enter \"help\""))
+		Message = TextSendMessage(text='Without command \"' + msg + '\"\nPlease enter \"help\" to continue')
+		line_bot_api.reply_message(event.reply_token, Message)
 	
-	line_bot_api.push_message('U85c186cd2f9c051c30c24c1fe7d9cb44', TextSendMessage(text='LineBot is ready for you.'))
+	line_bot_api.push_message('U85c186cd2f9c051c30c24c1fe7d9cb44', Message1)
 
 	userId = event.source.user_id
 	if not userId in user_id_set:
