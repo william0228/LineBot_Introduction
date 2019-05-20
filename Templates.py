@@ -151,10 +151,6 @@ def ExperienceTemplate():
           MessageTemplateAction(
             label="Other",
             text="List Other Experience"
-          ),
-          MessageTemplateAction(
-            label='back to previous step',
-            text='help'
           )
         ]
       )
