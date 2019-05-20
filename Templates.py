@@ -69,7 +69,7 @@ def EducationTemplate():
             text='Back to previous step',
             actions=[
               MessageTemplateAction(
-                label='go back right now',
+                label='Go back right now',
                 text='help'
               )
             ]
@@ -125,7 +125,7 @@ def ProjectTemplate():
             text='Back to previous step',
             actions=[
               MessageTemplateAction(
-                label='go back right now',
+                label='Go back right now',
                 text='help'
               )
             ]
@@ -202,12 +202,12 @@ def ProfessionalExperienceTemplate():
             text='Back to previous step',
             actions=[
               MessageTemplateAction(
-                label='go back right now',
+                label='Go back to Experience',
                 text='List Experience'
               ),
               MessageTemplateAction(
-                label='go back right now',
-                text='List Experience'
+                label='Go back to Introduction',
+                text='help'
               )
             ]
           )
@@ -259,7 +259,7 @@ def OtherExperienceTemplate():
             text='Back to previous step',
             actions=[
               MessageTemplateAction(
-                label='go back right now',
+                label='Go back right now',
                 text='List Experience'
               )
             ]
