@@ -122,8 +122,8 @@ def ExperienceTemplate():
         columns=[
           CarouselColumn(
             thumbnail_image_url='https://imgur.com/G9EAmGu.png',
-            title='Professional Experience',
-            text='Experience that more academic',
+            title='Professional',
+            text='Experience',
             actions=[
               MessageTemplateAction(
                 label='AmCAD .CORP',
