@@ -121,36 +121,37 @@ def ExperienceTemplate():
       template=CarouselTemplate(
         columns=[
           CarouselColumn(
-            thumbnail_image_url='https://imgur.com/G9EAmGu.png',
-            title='Professional',
-            text='Experience',
+            #thumbnail_image_url='https://imgur.com/G9EAmGu.png',
+            title='Professional Experience',
+            text='Experience that more academic',
             actions=[
               MessageTemplateAction(
-                label='NCTU',
-                text='NCTU details'
-              )
+                label='AmCAD .CORP',
+                text='AmCAD .CORP details'
+              )""",
+              MessageTemplateAction(
+                label='NCTU+ Organization',
+                text='NCTU+ Organization details'
+              )"""
             ]
           ),
           CarouselColumn(
-            thumbnail_image_url='https://imgur.com/G9EAmGu.png',
-            title='iSport',
-            text='Tools: JavaScript, MySQL and NodeJS',
+            #thumbnail_image_url='https://imgur.com/MRGiR1j.jpg',
+            title='Other Experience',
+            text='Experience of Club or Organization',
             actions=[
               MessageTemplateAction(
-                label='More details',
-                text='iSport details'
-              )
-            ]
-          ),
-          CarouselColumn(
-            thumbnail_image_url='https://imgur.com/MRGiR1j.jpg',
-            title='MLB Prediction',
-            text='Tools: Python',
-            actions=[
+                label='Student Association',
+                text='Student Association details'
+              )""",
               MessageTemplateAction(
-                label='More details',
-                text='MLB details'
-              )
+                label='Pop Dance Club',
+                text='Pop Dance Club details'
+              ),
+              MessageTemplateAction(
+                label='Area Alumni Association',
+                text='Area Alumni Association details'
+              )"""
             ]
           )
         ]
