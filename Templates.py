@@ -140,7 +140,7 @@ def ExperienceTemplate():
 def ProfessionalExperienceTemplate():
   return(
     TemplateSendMessage(
-      alt_text='Experience',
+      alt_text='Professional Experience',
       template=CarouselTemplate(
         columns=[
           CarouselColumn(
@@ -162,6 +162,51 @@ def ProfessionalExperienceTemplate():
               MessageTemplateAction(
                 label='More details',
                 text='NCTU+ Organization details'
+              )
+            ]
+          )
+        ]
+      )
+    )
+  )
+
+
+def OtherExperienceTemplate():
+  return(
+    TemplateSendMessage(
+      alt_text='Other Experience',
+      template=CarouselTemplate(
+        columns=[
+          CarouselColumn(
+            #thumbnail_image_url='https://imgur.com/G9EAmGu.png',
+            title='Student Association',
+            text='Information Department',
+            actions=[
+              MessageTemplateAction(
+                label='More details',
+                text='Student Association details'
+              )
+            ]
+          ),
+          CarouselColumn(
+            #thumbnail_image_url='https://imgur.com/MRGiR1j.jpg',
+            title='Pop Dance Club+',
+            text='Public Relation Chair',
+            actions=[
+              MessageTemplateAction(
+                label='More details',
+                text='Pop Dance Club details'
+              )
+            ]
+          ),
+          CarouselColumn(
+            #thumbnail_image_url='https://imgur.com/MRGiR1j.jpg',
+            title='Area Alumni Association+',
+            text='Event Planning Chair',
+            actions=[
+              MessageTemplateAction(
+                label='More details',
+                text='Area Alumni Association details'
               )
             ]
           )

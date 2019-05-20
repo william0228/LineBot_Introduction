@@ -91,17 +91,20 @@ def handle_message(event):
 	elif msg == "List Experience":
 		Message = ExperienceTemplate()
 		line_bot_api.reply_message(event.reply_token, Message)
-		#Professional Experience Section
+		# Professional Experience Section
 	elif msg == "List Professional Experience":
 		Message = ProfessionalExperienceTemplate()
-		line_bot_api.reply_message(event.reply_token, Message)	
+		line_bot_api.reply_message(event.reply_token, Message)
 	elif msg == "AmCAD .CORP details":
 		Message = TextSendMessage(text='-Intern in 2018/7 ~ 2018/9\n\n-Added \"Area Selecting Feature\" and \"Parameter Calculating Feature\" in Tumor Detective Instrument\n\n-Changed its stand-alone version into website version and successfully launched and improved user experience flow')
 		line_bot_api.reply_message(event.reply_token, Message)
 	elif msg == "NCTU+ Organization details":
 		Message = TextSendMessage(text='-FrontEnd designer\n\n-Developed all the pages in NCTU plus into Responsive Web Design pages\n\n-Designed Home page and Navber of NCTU plus website by using React JS')
 		line_bot_api.reply_message(event.reply_token, Message)
-	
+		# Other Experience Section
+	elif msg == "List Other Experience":
+		Message = OtherExperienceTemplate()
+		line_bot_api.reply_message(event.reply_token, Message)
 	elif msg == "Student Association details":
 		Message = TextSendMessage(text='-Information department\n\n-Website maintenance, Database Management, photography\n\n-Hosted NTU. NTHU. NCTU joint Program competition')
 		line_bot_api.reply_message(event.reply_token, Message)
