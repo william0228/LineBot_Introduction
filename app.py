@@ -57,6 +57,17 @@ def callback():
 def handle_message(event):
 
 	msg = event.message.text
+	
+	#######
+	idList = loadUserId()
+	if idList: user_id_set = set(idList)
+
+	try:
+		for userId in user_id_set:
+			line_bot_api.push_message(userId, TextSendMessage(text='LineBot is ready for you.'))
+	except Exception as e:
+		print(e)
+	#######
 
 	# Start Section
 	if msg == "help":
@@ -130,15 +141,5 @@ def handle_message(event):
 
 if __name__ == "__main__":
 
-	while True:
-		idList = loadUserId()
-		if idList: user_id_set = set(idList)
-
-		try:
-			for userId in user_id_set:
-				line_bot_api.push_message(userId, TextSendMessage(text='LineBot is ready for you.'))
-		except Exception as e:
-			print(e)
-
-		port = int(os.environ.get('PORT', 5000))
-		app.run(host='0.0.0.0', port=port)
+	port = int(os.environ.get('PORT', 5000))
+	app.run(host='0.0.0.0', port=port)
