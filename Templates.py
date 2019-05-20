@@ -118,6 +118,17 @@ def ProjectTemplate():
                 text='Selflection details'
               )
             ]
+          ),
+          CarouselColumn(
+            thumbnail_image_url='https://imgur.com/Dcca5IM.png',
+            title='Back to previous',
+            text='Back to previous step',
+            actions=[
+              MessageTemplateAction(
+                label='go back right now',
+                text='help'
+              )
+            ]
           )
         ]
       )
@@ -140,6 +151,10 @@ def ExperienceTemplate():
           MessageTemplateAction(
             label="Other",
             text="List Other Experience"
+          ),
+          MessageTemplateAction(
+            label='back to previous step',
+            text='help'
           )
         ]
       )
@@ -170,6 +185,17 @@ def ProfessionalExperienceTemplate():
               MessageTemplateAction(
                 label='More details',
                 text='NCTU+ Organization details'
+              )
+            ]
+          ),
+          CarouselColumn(
+            thumbnail_image_url='https://imgur.com/Dcca5IM.png',
+            title='Back to previous',
+            text='Back to previous step',
+            actions=[
+              MessageTemplateAction(
+                label='go back right now',
+                text='List Experience'
               )
             ]
           )
@@ -212,6 +238,17 @@ def OtherExperienceTemplate():
               MessageTemplateAction(
                 label='More details',
                 text='Area Alumni Association details'
+              )
+            ]
+          ),
+          CarouselColumn(
+            thumbnail_image_url='https://imgur.com/Dcca5IM.png',
+            title='Back to previous',
+            text='Back to previous step',
+            actions=[
+              MessageTemplateAction(
+                label='go back right now',
+                text='List Experience'
               )
             ]
           )
