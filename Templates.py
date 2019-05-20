@@ -151,6 +151,10 @@ def ExperienceTemplate():
           MessageTemplateAction(
             label="Other",
             text="List Other Experience"
+          ),
+          MessageTemplateAction(
+            label='Go Back',
+            text='help'
           )
         ]
       )
@@ -185,13 +189,13 @@ def ProfessionalExperienceTemplate():
             ]
           ),
           CarouselColumn(
-            thumbnail_image_url='https://imgur.com/Dcca5IM.png',
+            #thumbnail_image_url='https://imgur.com/Dcca5IM.png',
             title='Back to previous',
             text='Back to previous step',
             actions=[
               MessageTemplateAction(
                 label='go back right now',
-                text='List Experience'
+                text='help'
               )
             ]
           )
@@ -238,13 +242,13 @@ def OtherExperienceTemplate():
             ]
           ),
           CarouselColumn(
-            thumbnail_image_url='https://imgur.com/Dcca5IM.png',
+            #thumbnail_image_url='https://imgur.com/Dcca5IM.png',
             title='Back to previous',
             text='Back to previous step',
             actions=[
               MessageTemplateAction(
                 label='go back right now',
-                text='List Experience'
+                text='help'
               )
             ]
           )
