@@ -128,11 +128,7 @@ def ExperienceTemplate():
               MessageTemplateAction(
                 label='AmCAD .CORP',
                 text='AmCAD .CORP details'
-              )""",
-              MessageTemplateAction(
-                label='NCTU+ Organization',
-                text='NCTU+ Organization details'
-              )"""
+              )
             ]
           ),
           CarouselColumn(
@@ -143,15 +139,7 @@ def ExperienceTemplate():
               MessageTemplateAction(
                 label='Student',
                 text='Student Association details'
-              )""",
-              MessageTemplateAction(
-                label='Pop Dance Club',
-                text='Pop Dance Club details'
-              ),
-              MessageTemplateAction(
-                label='Area Alumni Association',
-                text='Area Alumni Association details'
-              )"""
+              )
             ]
           )
         ]
