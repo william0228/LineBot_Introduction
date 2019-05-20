@@ -175,10 +175,6 @@ def ProfessionalExperienceTemplate():
               MessageTemplateAction(
                 label='More details',
                 text='AmCAD .CORP details'
-              ),
-              URITemplateAction(
-                label='Facebook',
-                uri='https://www.google.com/'
               )
             ]
           ),
@@ -189,10 +185,6 @@ def ProfessionalExperienceTemplate():
               MessageTemplateAction(
                 label='More details',
                 text='NCTU+ Organization details'
-              ),
-              URITemplateAction(
-                label='Web Page',
-                uri='https://www.google.com/'
               )
             ]
           ),
