@@ -175,6 +175,10 @@ def ProfessionalExperienceTemplate():
               MessageTemplateAction(
                 label='More details',
                 text='AmCAD .CORP details'
+              ),
+              URITemplateAction(
+                label='Facebook Link',
+                uri='https://www.facebook.com/AmcadBiomed/'
               )
             ]
           ),
@@ -185,6 +189,10 @@ def ProfessionalExperienceTemplate():
               MessageTemplateAction(
                 label='More details',
                 text='NCTU+ Organization details'
+              ),
+              URITemplateAction(
+                label='Web Page Link',
+                uri='https://plus.nctu.edu.tw/'
               )
             ]
           ),
@@ -222,7 +230,7 @@ def OtherExperienceTemplate():
             ]
           ),
           CarouselColumn(
-            title='Pop Dance Club+',
+            title='Pop Dance Club',
             text='Public Relation Chair',
             actions=[
               MessageTemplateAction(
@@ -232,7 +240,7 @@ def OtherExperienceTemplate():
             ]
           ),
           CarouselColumn(
-            title='Area Alumni Association+',
+            title='Area Alumni Association',
             text='Event Planning Chair',
             actions=[
               MessageTemplateAction(
