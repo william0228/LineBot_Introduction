@@ -126,8 +126,8 @@ def ExperienceTemplate():
             text='Experience',
             actions=[
               MessageTemplateAction(
-                label='AmCAD',
-                text='AmCAD details'
+                label='NCTU',
+                text='NCTU details'
               )
             ]
           ),
