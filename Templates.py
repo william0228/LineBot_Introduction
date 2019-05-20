@@ -197,16 +197,15 @@ def ProfessionalExperienceTemplate():
             ]
           ),
           CarouselColumn(
-            #thumbnail_image_url='https://imgur.com/Dcca5IM.png',
             title='Back to previous',
             text='Back to previous step',
             actions=[
               MessageTemplateAction(
-                label='Go back to Experience',
+                label='Back to Experience',
                 text='List Experience'
               ),
               MessageTemplateAction(
-                label='Go back to Introduction',
+                label='Back to Introduction',
                 text='help'
               )
             ]
