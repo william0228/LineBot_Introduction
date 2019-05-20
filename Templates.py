@@ -122,7 +122,7 @@ def ExperienceTemplate():
         columns=[
           CarouselColumn(
             #thumbnail_image_url='https://imgur.com/G9EAmGu.png',
-            title='Professional Experience',
+            title='Professional',
             text='Experience that more academic',
             actions=[
               MessageTemplateAction(
@@ -137,7 +137,7 @@ def ExperienceTemplate():
           ),
           CarouselColumn(
             #thumbnail_image_url='https://imgur.com/MRGiR1j.jpg',
-            title='Other Experience',
+            title='Other',
             text='Experience of Club or Organization',
             actions=[
               MessageTemplateAction(
