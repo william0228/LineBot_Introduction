@@ -177,7 +177,7 @@ def ProfessionalExperienceTemplate():
                 text='AmCAD .CORP details'
               ),
               URITemplateAction(
-                label='Facebook Link',
+                label='Facebook',
                 uri='https://www.facebook.com/AmcadBiomed/'
               )
             ]
@@ -191,7 +191,7 @@ def ProfessionalExperienceTemplate():
                 text='NCTU+ Organization details'
               ),
               URITemplateAction(
-                label='Web Page Link',
+                label='Web Page',
                 uri='https://plus.nctu.edu.tw/'
               )
             ]
