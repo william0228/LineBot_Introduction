@@ -27,7 +27,7 @@ def InitialTemplate():
           ),
           MessageTemplateAction(
             label="Experience",
-            text="List Professional & Extracurricular Experience"
+            text="List Experience"
           )
         ]
       )
@@ -118,31 +118,50 @@ def ExperienceTemplate():
   return(
     TemplateSendMessage(
       alt_text='Experience',
+      template=ButtonsTemplate(
+        #thumbnail_image_url='https://imgur.com/1WCRDsm.jpg',
+        title='Experience',
+        text="Please click the botton",
+        actions=[
+          MessageTemplateAction(
+            label="Professional",
+            text="List Professional Experience"
+          ),
+          MessageTemplateAction(
+            label="Other",
+            text="List Other Experience"
+          )]
+        ]
+      )
+    )
+  )
+
+
+def ProfessionalExperienceTemplate():
+  return(
+    TemplateSendMessage(
+      alt_text='Experience',
       template=CarouselTemplate(
         columns=[
           CarouselColumn(
             #thumbnail_image_url='https://imgur.com/G9EAmGu.png',
-            title='Professional',
-            text='Experience',
+            title='AmCAD .CORP',
+            text='Intern',
             actions=[
               MessageTemplateAction(
-                label='AmCAD .CORP',
+                label='More details',
                 text='AmCAD .CORP details'
-              ),
-              MessageTemplateAction(
-                label='NCTU+',
-                text='NCTU+ Organization details'
               )
             ]
           ),
           CarouselColumn(
             #thumbnail_image_url='https://imgur.com/MRGiR1j.jpg',
-            title='Other',
-            text='Experience of Club or Organization',
+            title='NCTU+',
+            text='Web Development',
             actions=[
               MessageTemplateAction(
-                label='Student',
-                text='Student Association details'
+                label='More details',
+                text='NCTU+ Organization details'
               )
             ]
           )
