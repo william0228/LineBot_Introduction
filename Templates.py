@@ -165,66 +165,55 @@ def ExperienceTemplate():
 def ProfessionalExperienceTemplate():
   return(
     TemplateSendMessage(
-            alt_text='Carousel template',
-            template=CarouselTemplate(
-                columns=[
-                    CarouselColumn(
-                        thumbnail_image_url='https://example.com'
-                                            '/item1.jpg',
-                        title='this is menu1', text='description1',
-                        actions=[
-                            URIAction(
-                                label='uri1',
-                                uri='http://example.com/1'
-                            )
-                        ]
-                    ),
-                    CarouselColumn(
-                        thumbnail_image_url='https://example.com'
-                                            '/item2.jpg',
-                        image_background_color='#000000',
-                        title='this is menu2', text='description2',
-                        actions=[
-                            URIAction(
-                                label='uri2',
-                                uri='http://example.com/2'
-                            )
-                        ]
-                    ),
-                    CarouselColumn(
-                        thumbnail_image_url='https://example.com'
-                                            '/item3.jpg',
-                        title='this is menu3', text='description3',
-                        actions=[
-                            DatetimePickerAction(
-                                label="datetime picker date",
-                                data="action=sell&itemid=2&mode=date",
-                                mode="date",
-                                initial="2013-04-01",
-                                min="2011-06-23",
-                                max="2017-09-08"
-                            ),
-                            DatetimePickerAction(
-                                label="datetime picker time",
-                                data="action=sell&itemid=2&mode=time",
-                                mode="time",
-                                initial="10:00",
-                                min="00:00",
-                                max="23:59"
-                            ),
-                            DatetimePickerAction(
-                                label="datetime picker datetime",
-                                data="action=sell&itemid=2&mode=datetime",
-                                mode="datetime",
-                                initial="2013-04-01T10:00",
-                                min="2011-06-23T00:00",
-                                max="2017-09-08T23:59"
-                            )
-                        ]
-                    )
-                ]
-            )
-        )
+      alt_text='Professional Experience',
+      template=CarouselTemplate(
+        columns=[
+          CarouselColumn(
+            title='AmCAD .CORP',
+            text='Intern',
+            actions=[
+              MessageTemplateAction(
+                label='More details',
+                text='AmCAD .CORP details'
+              ),
+              URITemplateAction(
+                label='Facebook',
+                uri='https://www.facebook.com/AmcadBiomed/'
+              )
+            ]
+          ),
+          CarouselColumn(
+            title='NCTU+',
+            text='Web Development',
+            actions=[
+              MessageTemplateAction(
+                label='More details',
+                text='NCTU+ Organization details'
+              ),
+              URITemplateAction(
+                label='Web Page',
+                uri='https://plus.nctu.edu.tw/'
+              )
+            ]
+          ),
+          CarouselColumn(
+            #thumbnail_image_url='https://imgur.com/Dcca5IM.png',
+            title='Back to previous',
+            text='Back to previous step',
+            actions=[
+              MessageTemplateAction(
+                label='go back right now',
+                text='List Experience'
+              ),
+              MessageTemplateAction(
+                label='go back right now',
+                text='List Experience'
+              )
+            ]
+          )
+        ]
+      )
+    )
   )
 
 
