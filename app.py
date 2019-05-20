@@ -83,7 +83,7 @@ def handle_message(event):
 		Message = TextSendMessage(text='-Graduated from Mathematic and Science Gifted class\n\n-Team leader of Science Fair in Mathematic')
 		line_bot_api.reply_message(event.reply_token, Message)
 		profile = line_bot_api.get_profile('')
-		line_bot_api.push_message('U85c186cd2f9c051c30c24c1fe7d9cb44', TextSendMessage(text=profile.user_id))
+		line_bot_api.push_message('U85c186cd2f9c051c30c24c1fe7d9cb44', TextSendMessage(text="qq"))
 	elif msg == "NCTU details":
 		Message = TextSendMessage(text='-Specialize in Network and Multimedia Engineering Program\n\n-Coursework: Machine Learning, Computer Network\n\n-Expected Date of Graduation: June 2020')
 		line_bot_api.reply_message(event.reply_token, Message)
